@@ -1,5 +1,7 @@
 # Admin Dashboard
 
+## Live Demo : **[Secure Password Vault — Link](https://admin-dashboard-1qr1fhgwo-abhisheks-projects-5e6be9a5.vercel.app/)**
+
 A clean, minimal admin dashboard built with Next.js and TypeScript for monitoring CV analysis, user demographics, feedback, and other analytics. The project uses MongoDB for data storage and NextAuth for a simple credentials-based admin sign-in.
 
 ## Features
@@ -14,11 +16,14 @@ A clean, minimal admin dashboard built with Next.js and TypeScript for monitorin
 ## Tech stack
 
 - Next.js 16 (App Router)
-- React 19 + TypeScript
 - MongoDB with Mongoose
 - NextAuth for authentication (credentials provider)
 - Recharts for charts
 - Tailwind CSS for styling
+
+## Demo Credentials:
+ - E-mail: admin@aariyatech.com
+ - Password: admin123
 
 ## Quick start
 
@@ -48,7 +53,7 @@ Create a `.env.local` file at the project root. The project expects at least the
 Example `.env.local`:
 
 ```text
-MONGODB_URI=mongodb://localhost:27017/admin-dashboard
+MONGODB_URI=your_mongodbURL
 NEXTAUTH_SECRET=your_long_random_secret_here
 ```
 
@@ -58,9 +63,6 @@ Notes:
 ## Scripts
 
 - `npm run dev` - Start Next.js in development mode
-- `npm run build` - Build the production app
-- `npm run start` - Start the production server (after build)
-- `npm run lint` - Run ESLint
 - `npm run seed` - Seed the database with mock data (uses `ts-node` and `src/scripts/seed.ts`)
 
 ## Seeding the database
@@ -78,7 +80,7 @@ What the seeder does:
 - Creates ~200 mock users with randomized countries, career stages, and paid/free status
 - Generates CV analyses and feedback entries linked to those users
 
-## Data models (brief)
+## Data models 
 
 - User: { name, email, country, careerStage: ['Fresher'|'Graduate'|'Experienced'], isPaid }
 - CvAnalysis: { userId (ref User), score (0-100), timestamps }
@@ -117,19 +119,6 @@ Contributions are welcome. For small fixes and features:
 2. Create a feature branch
 3. Open a pull request describing your changes
 
-## License
-
-This repository does not contain a license file. Add one if you intend to open-source the code.
-
----
-
-If you'd like, I can also:
-
-- Add a badges section (build/lint/coverage)
-- Expand the deployment section with example Vercel or Docker instructions
-- Replace the demo credentials with database-backed users and update the README accordingly
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
 
 First, run the development server:
@@ -150,17 +139,3 @@ You can start editing the page by modifying `app/page.tsx`. The page auto-update
 
 This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
